@@ -4,6 +4,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 export default withMermaid(defineConfig({
   title: "42docs",
   description: "42Tokyoの課題ノート",
+  base: '/42docs/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
