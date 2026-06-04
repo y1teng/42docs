@@ -1,25 +1,21 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "42docs"
-  text: "Summarize the issues"
-  tagline: My great project tagline
+  text: "42Tokyoの課題ノート"
+  tagline: 詰まったこと・気づいたことをまとめていく
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: libft
+      link: /libft/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: ft_printf
+      link: /ft_printf/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: libft
+    details: 標準ライブラリの自前実装
+  - title: ft_printf
+    details: 可変長引数と出力フォーマットの実装
 ---
-
