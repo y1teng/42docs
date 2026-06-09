@@ -1,0 +1,125 @@
+/* CSS変数で紺色を指定（ライト・ダーク両対応） */
+:root {
+  --vp-nav-bg-color: #1c2e4a;
+  --vp-sidebar-bg-color: #1c2e4a;
+  --vp-c-bg-elv: #1c2e4a;
+}
+
+.dark {
+  --vp-nav-bg-color: #1c2e4a;
+  --vp-sidebar-bg-color: #1c2e4a;
+  --vp-c-bg-elv: #1c2e4a;
+}
+
+/* ページ全体の背景を紺色に・横スクロールを無効化 */
+html,
+body,
+#app {
+  background-color: #1c2e4a !important;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* コンテンツをカード型にして紺色の中に浮かせる */
+.VPDoc {
+  width: auto;
+  background-color: var(--vp-c-bg);
+  min-height: calc(100vh - var(--vp-nav-height, 64px) - 32px);
+  margin: 16px;
+  border-radius: 8px;
+}
+
+/* asideラッパーごと非表示にしてグリッド列を解放 */
+.VPDocAside,
+.VPDoc .container > .aside {
+  display: none !important;
+}
+
+/* aside列が消えた分、コンテンツ列を全幅に */
+.VPDoc.has-aside .container {
+  display: block !important;
+}
+
+/* ナビバー下の「On this page >」バーを非表示 */
+.VPLocalNav {
+  display: none !important;
+}
+
+/* ホームページではナビバーを非表示 */
+body:has(.VPHome) .VPNav {
+  display: none !important;
+}
+
+/* フィーチャーカードのホバー効果 */
+.VPFeature {
+  transition: background-color 0.2s, border-color 0.2s, transform 0.2s !important;
+}
+
+.VPFeature:hover {
+  background-color: #2a3f60 !important;
+  border-color: #4a6fa5 !important;
+  transform: translateY(-2px);
+}
+
+.VPFeature:hover .title {
+  color: #ffffff !important;
+}
+
+.VPFeature:hover .details {
+  color: #c8d4e8 !important;
+}
+
+/* デフォルトサイドバーグループを非表示（CustomSidebarNav で置き換え） */
+#VPSidebarNav > .group {
+  display: none !important;
+}
+
+/* ナビバーをフルウィンドウ幅で紺色に */
+.VPNavBar {
+  left: 0 !important;
+  right: 0 !important;
+  background-color: #1c2e4a !important;
+}
+
+/* ナビバーの順番: リンク → 検索 → ダークモード → GitHub */
+.VPNavBarMenu       { order: 1; flex: 1 !important; justify-content: flex-end; }
+.VPNavBarSearch     { order: 2; flex: 0 0 auto !important; }
+.VPNavBarAppearance { order: 3; }
+.VPNavBarSocialLinks { order: 4; }
+
+/* ナビバーのテキスト色 */
+.VPNavBar .title {
+  color: #e8edf5 !important;
+}
+
+.VPNavBarMenuLink {
+  color: #c8d4e8 !important;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: #ffffff !important;
+}
+
+/* サイドバーのテキスト色 */
+.VPSidebarItem .text {
+  color: #c8d4e8 !important;
+}
+
+.VPSidebarItem .link.active .text {
+  color: #7eb3f5 !important;
+}
+
+.VPSidebarItem .link:hover .text {
+  color: #ffffff !important;
+}
+
+.VPSidebarItem.level-0 > .item .text {
+  color: #a0b4d0 !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
