@@ -1,0 +1,15 @@
+#run server
+npm run docs:dev
+
+● ターミナルで以下の2コマンドを実行するだけです：
+
+  source ~/.nvm/nvm.sh
+  npm run docs:dev
+
+  起動したら http://localhost:5173/42docs/ をブラウザで開いてください。
+
+  止めるときは Ctrl + C。
+
+# side bar edit
+  .vitepress/config.mjs
+
