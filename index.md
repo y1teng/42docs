@@ -1,6 +1,6 @@
 ---
 layout: home
-comment: "勉強の邪魔だから静かにしてくれる？"
+comment: "今日は座禅に行きました"
 
 features:
   - title: libft
