@@ -28,6 +28,7 @@ export default withMermaid(defineConfig({
             { text: 'Overview', link: '/ft_printf/' },
             { text: 'man va_list', link: '/ft_printf/man_va' },
             { text: 'June-4-2026', link: '/ft_printf/June-4-2026' },
+            { text: 'Conversions', link: '/ft_printf/conversions' },
           ]
         }
       ],

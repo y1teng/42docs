@@ -1,5 +1,7 @@
 # mandatory の conversions
 
+int ft_printf(const char *, ...);
+
 === %c ===
 original -> y
 14
