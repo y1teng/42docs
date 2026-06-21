@@ -1,5 +1,7 @@
 # June 4, 2026
 
+## 本家
+
 ## 参考リンク集
 
 - [C言語 標準ライブラリ limits.h](https://ja.wikibooks.org/wiki/C%E8%A8%80%E8%AA%9E/%E6%A8%99%E6%BA%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/limits.h)
@@ -21,3 +23,6 @@
 - [C言語 標準ライブラリ stdarg.h](https://ja.wikibooks.org/wiki/C%E8%A8%80%E8%AA%9E/%E6%A8%99%E6%BA%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/stdarg.h)
 - [stdarg.h 解説 (captain-cocco)](https://captain-cocco.com/stdarg-h-c-standart-library/#google_vignette)
 - [YouTube: printf 検索](https://www.youtube.com/results?search_query=printf)
+
+## github
+- [PedroZappaさん](https://github.com/PedroZappa/42_ft_printf/tree/main)
