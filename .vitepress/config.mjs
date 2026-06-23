@@ -55,6 +55,16 @@ function buildSidebar(sections) {
   )
 }
 
+function getSectionDescription(section) {
+  const indexPath = path.resolve(__dirname, '..', section, 'index.md')
+  if (!fs.existsSync(indexPath)) return ''
+  const content = fs.readFileSync(indexPath, 'utf-8')
+  const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/)
+  if (!fmMatch) return ''
+  const descMatch = fmMatch[1].match(/^description:\s*(.+)$/m)
+  return descMatch ? descMatch[1].trim() : ''
+}
+
 const sections = getSections()
 
 export default withMermaid(defineConfig({
@@ -73,5 +83,15 @@ export default withMermaid(defineConfig({
     search: {
       provider: 'local'
     }
-  }
+  },
+
+  transformPageData(pageData) {
+    if (pageData.frontmatter.layout === 'home') {
+      pageData.frontmatter.features = sections.map(s => ({
+        title: s,
+        details: getSectionDescription(s),
+        link: `/${s}/`,
+      }))
+    }
+  },
 }))

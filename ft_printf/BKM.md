@@ -23,6 +23,12 @@
 - [C言語 標準ライブラリ stdarg.h](https://ja.wikibooks.org/wiki/C%E8%A8%80%E8%AA%9E/%E6%A8%99%E6%BA%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/stdarg.h)
 - [stdarg.h 解説 (captain-cocco)](https://captain-cocco.com/stdarg-h-c-standart-library/#google_vignette)
 - [YouTube: printf 検索](https://www.youtube.com/results?search_query=printf)
-
+- [整数値からポインタ値へのキャスト (C言語)](https://dlrecord.hatenablog.com/entry/2020/05/31/181817)
+- [](https://zenn.dev/ri5255/articles/96d1d090d24cca)
+- [](https://azelpg.gitlab.io/azsky2/note/prog/asm64/index.html)
+- [](https://zenn.dev/keitean/articles/aaef913b433677)
+- [](https://rat.cis.k.hosei.ac.jp/article/devel/debugongccgdb1/)
+- [](https://zenn.dev/ippei523/articles/af5ca97120c860)
+- [](https://zenn.dev/ippei523/articles/af5ca97120c860)
 ## github
 - [PedroZappaさん](https://github.com/PedroZappa/42_ft_printf/tree/main)

@@ -1,3 +1,6 @@
+---
+description: 標準ライブラリの自前実装
+---
 # libft
 First page!
 
