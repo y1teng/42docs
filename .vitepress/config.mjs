@@ -12,6 +12,15 @@ function toTitle(filename) {
     .replace(/[-_]/g, ' ')
 }
 
+function getFrontmatterTitle(filePath) {
+  if (!fs.existsSync(filePath)) return ''
+  const content = fs.readFileSync(filePath, 'utf-8')
+  const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/)
+  if (!fmMatch) return ''
+  const titleMatch = fmMatch[1].match(/^title:\s*(.+)$/m)
+  return titleMatch ? titleMatch[1].trim() : ''
+}
+
 function getSidebarItems(section) {
   const sectionDir = path.resolve(__dirname, '..', section)
   if (!fs.existsSync(sectionDir)) return []
@@ -20,7 +29,7 @@ function getSidebarItems(section) {
     .filter(file => file.endsWith('.md') && file !== 'index.md')
     .sort()
     .map(file => ({
-      text: toTitle(file),
+      text: getFrontmatterTitle(path.join(sectionDir, file)) || toTitle(file),
       link: `/${section}/${file.replace(/\.md$/, '')}`,
     }))
 }
