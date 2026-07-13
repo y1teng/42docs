@@ -80,6 +80,7 @@ export default withMermaid(defineConfig({
   title: "42docs",
   description: "42Tokyoの課題ノート",
   base: '/42docs/',
+  lastUpdated: true,
   themeConfig: {
     nav: buildNav(sections),
 

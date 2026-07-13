@@ -1,4 +1,4 @@
 ---
 layout: home
-comment: "今日は座禅に行きました"
+comment: "今yとチュロス食べとる"
 ---

@@ -2,11 +2,15 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
-const { frontmatter } = useData()
+const { frontmatter, page } = useData()
 const comment = computed(() => frontmatter.value.comment || '...')
 
-const today = new Date().toLocaleDateString('ja-JP', {
-  year: 'numeric', month: '2-digit', day: '2-digit'
+const today = computed(() => {
+  const ts = page.value.lastUpdated
+  const date = ts ? new Date(ts) : new Date()
+  return date.toLocaleDateString('ja-JP', {
+    year: 'numeric', month: '2-digit', day: '2-digit'
+  })
 })
 
 const art = computed(() => {
