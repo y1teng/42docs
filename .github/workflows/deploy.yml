@@ -20,9 +20,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # push_swap/push_swap is a submodule whose .gitmodules use git@github.com
+      # (SSH) URLs, which the runner has no key for. Rewrite to HTTPS first
+      # (works because these are public repos) then init recursively so the
+      # nested libft/libftprintf submodules come along too.
+      - name: Use HTTPS for submodules
+        run: git config --global url."https://github.com/".insteadOf "git@github.com:"
+
+      - name: Init submodules
+        run: git submodule update --init --recursive
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Install doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen graphviz
 
       - run: npm install
 

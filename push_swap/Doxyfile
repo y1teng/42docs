@@ -1,0 +1,36 @@
+# Doxygen config for push_swap.
+# Paths below are relative to the docs site root (98_42docs), because that's
+# where `npm run docs:doxygen` (see package.json) invokes doxygen from:
+#   doxygen push_swap/Doxyfile
+# Output is written into public/push_swap/doxygen so VitePress serves it
+# as a static asset at /42docs/push_swap/doxygen/index.html
+
+PROJECT_NAME           = "push_swap"
+PROJECT_BRIEF          = "スタック操作で整数列をソートするアルゴリズム実装 - 関数リファレンス"
+OUTPUT_LANGUAGE        = Japanese-en
+OUTPUT_DIRECTORY       = public/push_swap/doxygen
+
+INPUT                  = push_swap/push_swap
+FILE_PATTERNS          = *.c *.h
+RECURSIVE              = YES
+EXCLUDE                = push_swap/push_swap/libft push_swap/push_swap/libftprintf push_swap/push_swap/practices
+
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+WARN_IF_UNDOCUMENTED   = NO
+
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+HTML_OUTPUT            = .
+
+HAVE_DOT               = YES
+CALL_GRAPH              = YES
+CALLER_GRAPH           = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+DOT_GRAPH_MAX_NODES    = 30
+
+SOURCE_BROWSER         = YES
+FULL_PATH_NAMES        = NO
+
+QUIET                  = YES

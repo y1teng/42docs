@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+	"docs:doxygen": "mkdir -p public/push_swap/doxygen && doxygen push_swap/Doxyfile",
+	"predocs:dev": "npm run docs:doxygen",
 	"docs:dev": "vitepress dev",
+	"predocs:build": "npm run docs:doxygen",
 	"docs:build": "vitepress build",
 	"docs:preview": "vitepress preview"
   },
